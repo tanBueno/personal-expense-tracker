@@ -41,9 +41,8 @@ app.post('/post',async (req, res)=>{
 })
 
 app.get("/transactions", async (req, res) => {
-    let collection = await db.collection("transactions")
-    let results = await collection.find({}).limit(50).toArray();
-    res.send(results).status(200);
+    let results = await Transactions.find({}).limit(50);
+    res.status(200).json(results);
 });
 
 app.put("/transactions/:id", async (req, res) => {

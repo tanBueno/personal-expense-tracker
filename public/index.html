@@ -6,23 +6,24 @@
     </head>
     <body>
         <div class="grid_container">
-            <section class="grid_item" style='grid-area: box-1' id="current_balance">
+            <section class="grid_item" id="current_balance">
                 <h3>Current Balance:</h3>
                 <h2 id="current_balance_num">0</h2>
-                <img src="battle_cats_assets/Rarecapsule.webp"></img>
+                <img id="capsule_img" src="battle_cats_assets/Rarecapsule.webp"></img>
             </section>
             
-            <section class="grid_item" style='grid-area: box-2' id="transaction_list">
+            <section class="grid_item" id="transaction_list">
                 <button type="button" class="add_transaction" onclick="prepareForm('add'); displayElement('add_transaction_popup')">Add Transaction</button>
-                <h4>Transaction List:</h4>
+                <h3>Transaction List:</h3>
                 <div id="transaction_list_container">
-                    <table>
+                    <table class="table_container">
                         <thead>
                             <tr>
                                 <th>Type</th>
                                 <th>Amount</th>
                                 <th>Category</th>
                                 <th>Date</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="transaction_list_tbody">

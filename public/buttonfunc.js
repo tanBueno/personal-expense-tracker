@@ -7,7 +7,7 @@ let idToDelete = null;
 let idToEdit = null;
 
 function displayElement(id){
-    document.getElementById(id).style.display = "block";
+    document.getElementById(id).style.display = "flex";
 }
 
 function hideElement(id){
@@ -115,6 +115,7 @@ add_transaction_form.addEventListener('submit', async (e) => {
         body: JSON.stringify(data)
     });
 
+    hideElement('add_transaction_popup');
     idToEdit = null;
     add_transaction_form.reset();
     loadTransactions();
